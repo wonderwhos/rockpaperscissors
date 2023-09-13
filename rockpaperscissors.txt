@@ -1,0 +1,12 @@
+Ask for players input, rock paper or scissors 
+
+store input 
+
+have computer choose randomly between the three options
+- a function that chooses a random number between 3 that correlates with eiter rock paper or scissors
+
+decide the outcome 
+- are the answers equal 
+- does that answer beat them 
+
+print the winner 
