@@ -10,8 +10,11 @@
 
 
 
-let playerpoints;
-let comppoints;
+// Main 
+
+
+let playerPoints;
+let compPoints;
 
 const choices = ['Rock', 'Paper', 'Scissors'];
 
@@ -19,91 +22,90 @@ game()
 
 
 
-
+// Game complete
 
 
 function game() {
 
-    playerpoints = 0;
-    comppoints = 0;
+    playerPoints = 0;
+    compPoints = 0;
 
     for (let i = 0; i < 5; i++)
     {
 
-        let playerchoice = prompt("Rock, Paper or Scissors?");
+        let playerChoice = prompt("Rock, Paper or Scissors?");
 
-        let compchoice = choices[Math.floor(Math.random() * choices.length)];
+        let compChoice = choices[Math.floor(Math.random() * choices.length)];
 
-        choosewinner(playerchoice, compchoice)
+        chooseWinner(playerChoice, compChoice)
 
-        console.log(playerpoints)
-        console.log(comppoints)
+        console.log(playerPoints)
+        console.log(compPoints)
 
     }
 
-    if (playerpoints > comppoints) {
+    if (playerPoints > compPoints) {
         console.log("Player Wins")
     }
-    else if (playerpoints < comppoints) {
+    else if (playerPoints < compPoints) {
         console.log("Computer Wins")
     }
-    else 
-    {
+    else  {
         console.log("Draw")
     }
 
 }
 
-function printwinner(playerpoints) {
+
+// Game algorythym
+
+
+
+// Function for 
+
+function printWinner(playerPoints) {
         console.log("You Win!");
 }
 
-function printloser(comppoints) {
+function printLoser(compPoints) {
         console.log("You Lost :(");
 }
 
 
-function choosewinner(playerchoice, compchoice) {
-    if (playerchoice === compchoice)
+function chooseWinner(playerChoice, compChoice) {
+    if (playerChoice === compChoice)
         {
             console.log("Draw");
 
         }
-        else if (playerchoice == "Scissors" && compchoice == "Paper")
+        else if (playerChoice == "Scissors" && compChoice == "Paper")
         {
-            printwinner()
-            playerpoints+=1;
+            printWinner()
+            playerPoints+=1;
         }
-        else if (playerchoice == "Rock" && compchoice == "Scissors")
+        else if (playerChoice == "Rock" && compChoice == "Scissors")
         {
-            printwinner()
-            playerpoints+=1;
+            printWinner()
+            playerPoints+=1;
         }
-        else if (playerchoice == "Paper" && compchoice == "Rock")
+        else if (playerChoice == "Paper" && compChoice == "Rock")
         {
-            printwinner()
-            playerpoints+=1;
+            printWinner()
+            playerPoints+=1;
         }
-        else if (playerchoice == "Paper" && compchoice == "Scissors")
+        else if (playerChoice == "Paper" && compChoice == "Scissors")
         {
-            printloser()
-            comppoints+=1;
+            printLoser()
+            compPoints+=1;
         }
-        else if (playerchoice == "Scissors" && compchoice == "Rock")
+        else if (playerChoice == "Scissors" && compChoice == "Rock")
         {
-            printloser()
-            comppoints+=1;
+            printLoser()
+            compPoints+=1;
         }
-        else if (playerchoice == "Rock" && compchoice == "Paper")
+        else if (playerChoice == "Rock" && compChoice == "Paper")
         {
-            printloser()
-            comppoints+=1;
-        }
+            printLoser()
+            compPoints+=1;
+        } 
     }
-    
-
-// Add points to playerpoints when player wins 
-
-
-
-// Add points to comppoints when computer wins
